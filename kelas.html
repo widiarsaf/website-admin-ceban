@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		<link rel="stylesheet" href="https://cdn.datatables.net/1.11.1/css/jquery.dataTables.min.css">
+		
+		<title>Kelas</title>
+		
+		<link href="style.css" rel="stylesheet">
+</head>
+<body>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#">Navbar</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+					aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+					<div class="navbar-nav">
+						<a class="nav-link" aria-current="page" href="index.html">User</a>
+						<a class="nav-link" href="kelas.html">Kelas</a>
+						<a class="nav-link" href="subject.html">Mata Pelajaran</a>
+					</div>
+				</div>
+			</div>
+		</nav>
+
+		<!-- Table Kelas -->
+		<div class="container">
+			<div class="bd-highlight mb-3">
+				<div class="">
+					<h2>Kelas</h2>
+				</div>
+				<div class="float-end">
+					<br>
+					<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addKelas">+ Create
+						Kelas</button>
+				</div>
+			</div>
+		
+			<div class="table-responsive">
+				<table class="table" id="kelasTable">
+					<thead>
+						<tr>
+							<th scope="col">Id</th>
+							<th scope="col">Nama Kelas</th>
+							<th scope="col">Aksi</th>
+						</tr>
+					</thead>
+					<tbody id="mytable">
+						<tr>
+							<th scope="row" colspan="5">Loading...</th>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+
+		<!-- Modal Add Kelas -->
+		<div class="modal fade" id="addKelas" tabindex="-1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Create New User</h5>
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">x</button>
+					</div>
+					<div class="modal-body">
+						<!-- Form Content -->
+						<form action="">
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<label for="name" style="font-size : 20px">Nama Kelas</label>
+										<input type="text" class="form-control" placeholder="" id="className">
+									</div>
+								</div>
+							</div>
+							<!--  row   -->
+							<div>
+								<a type="button" class="btn btn-light" style="color: grey !important;" id="closeAdd" data-bs-dismiss="modal"
+									style="color: white;">Close</a>
+								<button type="submit" class="btn btn-primary" id="addDataKelas">Add Data</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Modal Edit Kelas -->
+		<div class="modal fade" id="editKelas" tabindex="-1">
+			<div class="modal-dialog modal-lg">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title">Create New User</h5>
+						<button type="button" class="btn btn-danger" data-bs-dismiss="modal" aria-label="Close">x</button>
+					</div>
+					<div class="modal-body">
+						<!-- Form Content -->
+						<form action="">
+							<div class="row">
+								<div class="col">
+									<div class="form-group">
+										<label for="name" style="font-size : 20px">Nama Kelas</label>
+										<input type="text" class="form-control" placeholder="" id="editClassName">
+									</div>
+								</div>
+							</div>
+							<!--  row   -->
+							<div>
+								<a type="button" class="btn btn-light" style="color: grey !important;" id="closeEdit" data-bs-dismiss="modal"
+									style="color: white;">Close</a>
+								<button type="submit" class="btn btn-primary" id="editDataKelas">Edit Data</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="kelas.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.16/dist/sweetalert2.all.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script src="https://cdn.datatables.net/1.11.1/js/jquery.dataTables.min.js"></script>
+
+</body>
+</html>
